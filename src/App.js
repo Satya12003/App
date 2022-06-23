@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Addtodo from './components/Addtodo'
+import Listtodo from './components/Listtodo'
+import Count from './components/Counttodo'
+import { useState } from "react";
+import Addusers from './components/Addusers';
+import Userslist from './components/Userslist';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <div className="row">
+        <div className="col-sm-4"><Addtodo  /></div>
+        <div className="col-sm-4"><Listtodo /></div>
+        <div className="col-sm-4"><Count  /></div>
+      </div>
+      <div className="row">
+        <div className="col-sm-6"><Addusers  /></div>
+        <div className="col-sm-6"><Userslist /></div>
+      </div>
     </div>
   );
 }
